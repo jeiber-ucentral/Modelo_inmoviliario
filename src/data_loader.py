@@ -38,9 +38,9 @@ def cargue_datos(ruta, msj = True):
   df = pd.read_csv(ruta, sep = ",")
 
   # Mensajes confirmatorios
-  print("\n")
-  print("CARGUE EXITOSO DE LA BASE DE DATOS!!" + "\n")
   if msj:
+    print("\n")
+    print("CARGUE EXITOSO DE LA BASE DE DATOS!!" + "\n")
     print(f'***Se han cargado {df.shape[0]} filas y {df.shape[1]} columnas de forma satisfactoria *** \n')
     print(df.head(3))
 
@@ -86,8 +86,8 @@ def depurador_df(df, msj = True):
   df = pd.get_dummies(df, columns=['Area Type', 'City', 'Furnishing Status', 'Point of Contact'], drop_first=True).astype(int)
   
   # Mensaje de transformacion exitosa
-  print("SE HA DEPURADO LA BASE DE DATOS!!" + "\n")
   if msj:
+    print("SE HA DEPURADO LA BASE DE DATOS!!" + "\n")
     print(f'***Dimensiones finales {df.shape[0]} filas y {df.shape[1]} columnas *** \n')
     print(df.head(3))
 
@@ -112,8 +112,6 @@ def main(ruta, msj = False):
 
   # Cargue de base de datos
   df = cargue_datos(ruta, msj = msj)
-
-  print("\n")
 
   # Depuracion de la base
   df_adj = depurador_df(df, msj = msj)
