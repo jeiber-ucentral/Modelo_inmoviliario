@@ -1,13 +1,14 @@
 ###########################
 # # # 02. TRAIN MODEL # # # 
 ###########################
+
 #------------#
 # # INDICE # #
 #------------#
 # 1. Cargue de librerias
 # 2. Cargue y Segmentacion de datos
 # 3. Entrenamiento del modelo
-# 4. Exportar el modelo y scaler
+# 4. Exportar el modelo, scaler y datos de prueba
 # 5. Funcion consolidada
 
 #==================================================================
@@ -18,55 +19,52 @@
 import warnings
 warnings.filterwarnings("ignore")
 
-import pandas as pd
-import numpy as np
-import re
 import os
-import data_loader 
+import joblib 
+import numpy as np
+import pandas as pd
+import data_loader
+import matplotlib.pyplot as plt
 
+from model import constr_modelo  
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, mean_absolute_percentage_error, r2_score
 
-import matplotlib.pyplot as plt
-
 import tensorflow as tf
-from tensorflow import keras
-from tensorflow.keras import layers
-from tensorflow.keras import regularizers
 
 #-------------------------------------------#
 # # # 2. Cargue y Segmentacion de datos # # #
 #-------------------------------------------#
-def division_datos(ruta, mensajes = True):
+def division_datos(ruta, mensajes=True):
     '''
-    Realiza el cargue y segmentacion de los datos depurados para entrenamiento, validacion y prueba del modelo,
-    asi mismo retorna la funcion de escalado empleada en los datos
-
+    Carga y segmenta los datos en entrenamiento, validacion y prueba.
+    Guarda el scaler para normalizar datos en la prediccion.
     Argumentos:
-        *mensajes: Si es verdadero retorna la cantidad de registros que estarán en los datos de entrenamiento, prueba y validacion
-    Retorno:
-        * Base segmentada en entrenamiento, prueba y validacion tanto de X como de Y (6 bases)
-        * Funcion de escalado encontrada
-    '''
+        * ruta: ruta del archivo a cargar
+        * mensajes: Por default es True. Indica si se desea imprimir un diagnostico de cantidad de filas y primeros registros de las bases finales
 
-    # Cargue de los datos limpios
+    Retorno:
+        * x_train, x_test, x_val
+        * y_train, y_test, y_val
+        * scaler utilizado para normalizar los datos
+    '''
     df = data_loader.main(ruta=ruta, msj=mensajes)
 
-    # Division de los datos en objetivo y regresoras
+    # Division en variables predictoras (X) y objetivo (Y)
     x = df.drop('Rent', axis=1)
     y = df['Rent']
 
-    # Estandarizacion de datos
+    # Escalado de datos
     scaler = StandardScaler()
     x = scaler.fit_transform(x)
 
-    # # Division de los datos en entrenamiento, test y validacion
+    # Division en train, test y validacion
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random_state=42)
     x_train, x_val, y_train, y_val = train_test_split(x_train, y_train, test_size=0.10, random_state=42)
 
     if mensajes:
-        print("x_train: ",  x_train.shape)
+        print("x_train: ", x_train.shape)
         print("x_test: ", x_test.shape)
         print("x_val: ", x_val.shape)
     
@@ -75,36 +73,35 @@ def division_datos(ruta, mensajes = True):
 #-------------------------------------#    
 # # # 3. Entrenamiento del modelo # # #
 #-------------------------------------#
-def entrenamiento(x_train, x_test, x_val, y_train, y_test, y_val, grafico = True):
+def entrenamiento(x_train, x_val, y_train, y_val, grafico=True):
     '''
+    Entrena el modelo y muestra el grafico de desempeno (si se desea).
+    Argumentos:
+        * x_train : Datos de entrenamiento ; entradas del modelo para el entrenamiento
+        * x_val : Datos de validacion del modelo ; entradas del modelo para la validacion
+        * y_train  : Datos de entrenamiento ; salida del modelo para el entrenamiento
+        * y_val  : Datos de validacion ; salida del modelo para la validacion 
+        * grafico : (True or False) si se desea (True) mostrar el grafico de desempeno del modelo en cuanto a funcion de perdida y metrica por epoca
+    Retorno:
+        * model: Retorna el modelo estimado de acuerdo a la arquitectura dada y los datos de entrenamiento y validacion
+        * History: Historia del proceso de estimacion del modelo por epoca (funcion de perdida y metricas)
+        * Grafico de desempeno (si se desea)
     '''
-    # # Definicion de la Arquitectura
-    model = keras.Sequential([
-        layers.Dense(128, activation='relu', kernel_regularizer = regularizers.l1_l2(l1 = 0.001, l2 = 0.001), input_shape=(x_train.shape[1],)), 
-        layers.Dense(64, activation='relu', kernel_regularizer = regularizers.l1_l2(l1 = 0.001, l2 = 0.001)),  
-        layers.Dense(32, activation='relu', kernel_regularizer = regularizers.l1_l2(l1 = 0.001, l2 = 0.001)),    
-        layers.Dense(16, activation='relu'),  
-        layers.Dense(8, activation='relu'),  
-        layers.Dense(1, activation='linear')  
-    ])
-
-    # Compilar el modelo
-    model.compile(optimizer='adam',  # RMSprop, adam
-                loss='mean_squared_error',  
-                metrics=['mape'])  
+    # Cargar la arquitectura del modelo
+    model = constr_modelo(x_train = x_train)
 
     # Entrenando el modelo
     history = model.fit(x_train, y_train,
-                        epochs = 50,
-                        batch_size = 16,
-                        verbose = 0,
-                        validation_data = (x_val, y_val)
+                        epochs=50,
+                        batch_size=16,
+                        verbose=0,
+                        validation_data=(x_val, y_val)
                         )
 
     if grafico:
-        # Plot MAPE on the first subplot
         fig, axes = plt.subplots(1, 2, figsize=(15, 5))
 
+        # Grafico de MAPE
         axes[0].plot(history.history['mape'])
         axes[0].plot(history.history['val_mape'])
         axes[0].set_title('Model MAPE')
@@ -112,7 +109,7 @@ def entrenamiento(x_train, x_test, x_val, y_train, y_test, y_val, grafico = True
         axes[0].set_xlabel('Epoch')
         axes[0].legend(['Train', 'Validation'], loc='upper left')
 
-        #Plot Loss on the second subplot
+        # Grafico de perdida (Loss)
         axes[1].plot(history.history['loss'])
         axes[1].plot(history.history['val_loss'])
         axes[1].set_title('Model Loss')
@@ -120,31 +117,64 @@ def entrenamiento(x_train, x_test, x_val, y_train, y_test, y_val, grafico = True
         axes[1].set_xlabel('Epoch')
         axes[1].legend(['Train', 'Validation'], loc='upper left')
 
-        plt.tight_layout()  # Adjusts subplot parameters for a tight layout
+        plt.tight_layout()
         plt.show()
     
-    return model
+    return model, history
 
 #----------------------------------------#
 # # # 4. Exportar el modelo y scaler # # #
 #----------------------------------------#
-'''
-def exportador_procesos(model, scaler):
+def exportar_modelo(model, scaler, x_test, y_test):
+    '''
+    Guarda el modelo entrenado, el scaler y los datos de prueba.
+    
+    Argumentos:
+        * model: Modelo estimado dada la arquitectura
+        * scaler: Funcion de escalado de datos empleada en la base train y validation (para funcion predict)
+        * x_test: base de test ; entradas del modelo para el testeo del modelo
+        * y_test base de test ; salidas del modelo para el testeo del modelo
 
+    Retorno:
+        * Guardado del modelo, funcion scaler y datos de prueba en la carpeta models
+    '''
+    # Guardar el modelo estimado
+    modelo_path = "models/model_v1.h5"
+    model.save(modelo_path)
+    print(f"Modelo guardado en {modelo_path} 👌")
 
-'''
+    # Guardar la funcion de escalado empleada
+    scaler_path = "models/scaler.pkl"
+    joblib.dump(scaler, scaler_path)
+    print(f"Scaler guardado en {scaler_path} 👌")
 
+    # Guardar datos de prueba para validaciones
+    test_data_path = "models/test_data.pkl"
+    joblib.dump((x_test, y_test), test_data_path)
+    print(f"Datos de prueba guardados en {test_data_path} 👌")
 
 #--------------------------------#
 # # # 5. Funcion consolidada # # #
 #--------------------------------#
-def main(ruta, msj, grafico):
-    # Segmentando la base de datos
-    x_train, x_test, x_val, y_train, y_test, y_val, scaler = division_datos(ruta, mensajes = msj)
+def main(ruta, msj=True, grafico=True):
+    '''
+    Ejecuta todo el proceso de carga, entrenamiento y exportacion de archivos.
+    Argumentos:
+        * ruta: ruta del archivo a cargar
+        * msj: Por default es True. Indica si se desea imprimir un diagnostico de cantidad de filas y primeros registros de las bases finales
+        * grafico : (True or False) si se desea (True) mostrar el grafico de desempeno del modelo en cuanto a funcion de perdida y metrica por epoca
+    Retorno:
+        * Modelo, funcion de escalado de datos y datos de testeo exportados
+    '''
+    # Cargar y segmentar datos
+    x_train, x_test, x_val, y_train, y_test, y_val, scaler = division_datos(ruta, mensajes=msj)
 
-    # Entrenando el modelo
-    model = entrenamiento(x_train, x_test, x_val, y_train, y_test, y_val, grafico = grafico)
-    print("MODELO ENTRENADO SATISFACTORIAMENTE!!👌")
+    # Entrenar el modelo
+    model, history = entrenamiento(x_train, x_val, y_train, y_val, grafico=grafico)
+    print("MODELO ENTRENADO SATISFACTORIAMENTE!! 👌")
+
+    # Guardar el modelo, scaler y datos de prueba
+    exportar_modelo(model, scaler, x_test, y_test)
 
     return model, scaler
 
@@ -155,7 +185,6 @@ if __name__ == '__main__':
     grafico = input("Desea ver el grafico de entrenamiento del modelo? (True / False): ").strip().lower() in ["true", "1", "yes"]
 
     if not os.path.exists(ruta):
-        print("⚠️ La ruta ingresada no es válida. Verifica e intenta nuevamente.")
+        print("⚠️ La ruta ingresada no es valida. Verifica e intenta nuevamente.")
     else:
         main(ruta, msj, grafico)
-
