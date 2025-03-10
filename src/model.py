@@ -25,8 +25,8 @@ import matplotlib.pyplot as plt
 
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras import layers
-from tensorflow.keras import regularizers
+from tensorflow.keras import layers # type: ignore
+from tensorflow.keras import regularizers # type: ignore
 
 #------------------------------------------#
 # # # 2. Definicion de la arquitectura # # #
