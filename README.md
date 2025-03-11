@@ -27,7 +27,7 @@ Este taller utilizara un conjunto de datos que contiene informacion detallada so
 - Floor: Piso en el que se encuentra la propiedad y el total de pisos en el edificio (Ejemplo: Planta baja de 2, 3 de 5, etc.).
 - Area Type: Calculo del tamano en Superficie Total, Superficie util o Area Construida.  
 - Area Locality: Localidad de la propiedad.
-- City: Ciudad donde est ́a ubicada la propiedad.
+- City: Ciudad donde esta ubicada la propiedad.
 - Furnishing Status: Estado de amueblado de la propiedad (Amueblado, Semi-Amueblado o No Amueblado).
 - Tenant Preferred: Tipo de inquilino preferido por el dueno o agente.
 - Bathroom: Numero de banos.
