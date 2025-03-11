@@ -70,7 +70,10 @@ La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pa
 
 
 ## 6. Interactuando con el proyecto
-Para la correcta ejecusión de los notebooks se debe realizar lo siguiente:
+Para empezar, para la correcta ejecución de los procesos se debe clonar el repositorio a su equipo local empleando GIT, siendo el link del repositorio el siguiente: https://github.com/jeiber-ucentral/Modelo_inmoviliario.git
+Una vez clonado el repositorio se debe abrir el folder del proyecto mediante Visual Studio Code o su editor de código preferido.
+
+Para la correcta ejecución de los notebooks se debe realizar lo siguiente:
 
 * Notebooks
 1) [EDA.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/00%20EDA.ipynb)
@@ -79,11 +82,16 @@ Para la correcta ejecusión de los notebooks se debe realizar lo siguiente:
 
 * Archivos .py
 1) [data_loader.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/data_loader.py)
-2) [model.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/model.py)
-3) [train.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/train.py)
-4) [evaluate.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/evaluate.py)
-5) [predict.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/predict.py)
-6) [utils.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/utils.py) 
+
+Al ejecutar en la terminal mediante el comando **python src/data_loader.py** en la terminal saldrá un mensaje que pedirá escribir la ruta del archivo "**House_Rent_Dataset.csv"**. Se debe tener a la mano la ruta donde se aloja este archivo de forma local para posteriormente pegarlo en dicha variable de entrada manual. NOTA:// Usualmente al copiar la ruta esta al pegarla sale entre comillas. De ser el caso estas deben ser omitidas dentro de la ruta eviada. 
+
+Acto seguido el sistema pedira determinar si se desea ver los detalles del cargue de los datos. En caso de ser así y querer ver este status de cargue de datos se debe digitar la palabra **"True"**. Caso contrario **"False"**. Una vez diligenciados estos requerimientos el proceso ejecutara  en pantalla mostrara el resultado obtenido, siendo este el cargue satisfactorio de la base de datos y su depuración para el proceso de entrenamiento del modelo propuesto y su uso.
+
+3) [model.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/model.py)
+4) [train.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/train.py)
+5) [evaluate.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/evaluate.py)
+6) [predict.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/predict.py)
+7) [utils.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/utils.py) 
 
 
 ## 7. Rendimiento del modelo
