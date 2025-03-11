@@ -33,7 +33,7 @@ Este taller utilizara un conjunto de datos que contiene informacion detallada so
 - Bathroom: Numero de banos.
 - Point of Contact: Persona de contacto para obtener mas informacion sobre la propiedad.
 
-## 2. Explorción del DataSet
+## 2. Exploración del DataSet
 
 La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pasos posteriores a este análisis exploratorio de datos se realizaría una predicción del valor de esta variable, por lo que voy a estudiarla con mayor detenimiento. A simple vista se pueden apreciar:
 
