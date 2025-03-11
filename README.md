@@ -9,10 +9,10 @@ Voy a dividir el análisis en los siguientes apartados:
 2. Exploracion del Dataset
 3. Modelo de red neuronal
 4. Requisitos previos y dependencias
-5. Entrenamiento desde train.py
-6. Evaluando desde evaluate.py
+5. Descripcion de archivos
+6. Interactuando con el proyecto
 7. Prediciendo desde predict.py
-8. Rendimiento del modelo
+8. Conclusion
 
 
 ## 1. Objetivo y Datos Utilizados
