@@ -100,7 +100,11 @@ Al ejecutar en la terminal mediante el comando **python src/train.py** en la ter
 
 Es de aclarar, para la ejecución del proyecto NO ES NECESARIO ejecutar antes el archivo **data_loader.py**, esto se realiza con el fin de determinar que el proceso de lectura y depuración de los datos sea exitoso, mas se realiza de forma automática en este script llamando justamente las funciones empleadas en **data_loader.py**.
 
-Una vez ejecutado el proceso el programa realizará de forma automática el cargue, depuración y segmentación de los datos, así como el entrenamiento y exportación del modelo a la carpeta **models**. Tambien guardará los datos de test para su uso en la evaluación. 
+Luego de suministrada la ruta, el sistema pedira determinar si se desea imprimir los diagnosticos de cargue y depuración de datos exitosos. De querer ver este disgnóstico se debe digitar **True**, caso contrario digitar **False**.
+
+Finalmente, el sistema pedirá determinar si se desea imprimir el gráfico de entrenamiento del modelo. De querer ver el gráfico se debe digitar **True**, caso contrario digitar **False**.
+
+Una vez ejecutado el proceso el programa realizará de forma automática el cargue, depuración y segmentación de los datos, así como el entrenamiento y exportación del modelo a la carpeta **models**. Tambien guardará los datos de test para su uso en la evaluación.  
 
 4) [evaluate.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/evaluate.py)
 
