@@ -71,7 +71,10 @@ La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pa
 
 ## 6. Interactuando con el proyecto
 Para empezar, para la correcta ejecución de los procesos se debe clonar el repositorio a su equipo local empleando GIT, siendo el link del repositorio el siguiente: https://github.com/jeiber-ucentral/Modelo_inmoviliario.git
+
 Una vez clonado el repositorio se debe abrir el folder del proyecto mediante Visual Studio Code o su editor de código preferido.
+
+Así mismo, es necesario contar localmente con el archivo "**House_Rent_Dataset.csv"**. Este no se presenta en el repositorio como un insumo, por lo que se asume se encuentra en su maquina local.
 
 Para la correcta ejecución de los notebooks se debe realizar lo siguiente:
 
