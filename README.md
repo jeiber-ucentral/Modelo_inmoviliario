@@ -14,7 +14,7 @@ Voy a dividir el análisis en los siguientes apartados:
 4. Limpieza básica de los datos
 5. Comprobación de suposiciones
 
-## 1. El problema
+## 1. Objetivo y Datos Utilizados
 
 Para entender realmente el conjunto de datos, voy a estudiar el significado y la relevancia de cada variable con respecto al problema. Intentaré responder a diversas cuestiones sobre ellas, como:
 
@@ -104,7 +104,7 @@ En la competición de Kaggle 'House prices' se indica que el problema es la pred
 * <b>SaleType</b>: tipo de venta
 * <b>SaleCondition</b>: Condiciones de venta
 
-## 2. Análisis univariable: 'SalePrice'
+## 2. Explorción del DataSet
 
 La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pasos posteriores a este análisis exploratorio de datos se realizaría una predicción del valor de esta variable, por lo que voy a estudiarla con mayor detenimiento. A simple vista se pueden apreciar:
 
@@ -112,7 +112,7 @@ La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pa
 * Una asimetría positiva.
 * Algunos picos.
 
-### Resumiendo:
+## 3. Modelo de Red Neuronal
 
 * 'GrLivArea' y 'TotalBsmtSF' mantienen una relación lineal positiva con 'SalePrice', aumentando en el mismo sentido. En el caso de 'TotalBsmtSF', la pendiente de esta relación es muy acentuada.
 * 'OverallQual' y 'YearBuilt' también parecen relacionadas con 'SalePrice' (más fuerte en el primer caso), tal y como se puede observar en los diagramas de cajas.
@@ -120,7 +120,7 @@ La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pa
 Sólo he explorado cuatro variables, pero hay muchas otras a analizar.
 
 
-## 3. Análisis multivariable
+## 4. Requisitos previos y dependencias
 
 Hasta ahora sólo me he dejado llevar por la intuición para el análisis de las variables que he creído importantes. Es hora de un análisis más objetivo.
 
@@ -136,7 +136,7 @@ Para ello voy a realizar las siguientes pruebas de correlación:
 * Diagramas de dispersión entre las variables más correladas.
 
 
-## 4. Limpieza de datos
+## 5. Entrenamiento desde train.py
 
 ### Datos desaparecidos
 
