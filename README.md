@@ -21,16 +21,16 @@ Dado un conjunto de datos con informacion sobre alquileres (metros cuadrados, nu
 
 Este taller utilizara un conjunto de datos que contiene informacion detallada sobre mas de 4700 propiedades residenciales disponibles para alquiler, abarcando casas, apartamentos y pisos. El conjunto de datos incluye las siguientes variables. 
 
-- BHK: N ́umero de habitaciones, sala y cocina.
+- BHK: Numero de habitaciones, sala y cocina.
 - Rent: Precio de alquiler de las casas/apartamentos/pisos.
-- Size: Tama ̃no de las casas/apartamentos/pisos en pies cuadrados.
+- Size: Tamano de las casas/apartamentos/pisos en pies cuadrados.
 - Floor: Piso en el que se encuentra la propiedad y el total de pisos en el edificio (Ejemplo: Planta baja de 2, 3 de 5, etc.).
-- Area Type: C ́alculo del tama ̃no en Superficie Total, Superficie  ́util o Area Construida.  ́
+- Area Type: Calculo del tamano en Superficie Total, Superficie util o Area Construida.  
 - Area Locality: Localidad de la propiedad.
 - City: Ciudad donde est ́a ubicada la propiedad.
 - Furnishing Status: Estado de amueblado de la propiedad (Amueblado, Semi-Amueblado o No Amueblado).
-- Tenant Preferred: Tipo de inquilino preferido por el due ̃no o agente.
-- Bathroom: N ́umero de banos.
+- Tenant Preferred: Tipo de inquilino preferido por el dueno o agente.
+- Bathroom: Numero de banos.
 - Point of Contact: Persona de contacto para obtener mas informacion sobre la propiedad.
 
 ## 2. Explorción del DataSet
