@@ -114,6 +114,8 @@ La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pa
 
 ## 3. Modelo de Red Neuronal
 
+### Requerimientos en librerías
+
 * 'GrLivArea' y 'TotalBsmtSF' mantienen una relación lineal positiva con 'SalePrice', aumentando en el mismo sentido. En el caso de 'TotalBsmtSF', la pendiente de esta relación es muy acentuada.
 * 'OverallQual' y 'YearBuilt' también parecen relacionadas con 'SalePrice' (más fuerte en el primer caso), tal y como se puede observar en los diagramas de cajas.
 
@@ -173,7 +175,7 @@ Este diagrama de dispersión muestra un par de cosas interesantes:
 Aunque se pueden observar algunos valores bastante extremos (p.ej. TotalBsmtSF > 3000), parece que conservan la tendencia, por lo que voy a mantenerlos.
 
 
-## 5. Comprobación de normalidad
+## 6. Evaluando desde evaluate.py
 
 Ya he realizado cierta limpieza de datos y estudiado la variable 'SalePrice'. Ahora voy a comprobar si 'SalePrice' cumple las asunciones estadísticas que nos permiten aplicar las técnicas del análisis multivariable.
 
@@ -187,7 +189,7 @@ De acuerdo con [Hair et al. (2013)](https://www.amazon.com/gp/product/9332536503
 
 * <b>Ausencia de errores correlacionados</b> - Esto ocurre a menudo en series temporales, donde algunos patrones están relacionados en el tiempo. Tampoco voy a tocar este asunto.
 
-### En búsqueda de la normalidad
+## 7. Prediciendo desde predict.py
 
 El objetivo es estudiar la variable 'SalePrice' de forma fácil, comprobando:
 
@@ -206,7 +208,7 @@ Prosigo con el estudio de la variable 'TotalBsmtSF'. Estos gráficos nos muestra
 
 Para aplicar una transformación logarítmica, crearé una variable binaria (tener o no tener sótano). Después, aplicaré la transformación logarítmica a todas las observaciones que no sean cero, ignorando aquellas con valor cero. De esta manera podré transformar los datos, sin perder el efecto de tener o no sótano.
 
-### En búsqueda de la homocedasticidad
+## 8. Rendimiento del modelo
 
 El mejor método para probar la homocedasticidad para dos variables métricas es de forma gráfica. Las desviaciones de una dispersión uniforme se muestran mediante formas tales como conos (pequeña dispersión a un lado del gráfico, gran dispersión en el lado opuesto) o diamantes (un gran número de puntos en el centro de la distribución).
 
