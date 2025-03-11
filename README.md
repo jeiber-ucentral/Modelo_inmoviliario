@@ -95,8 +95,19 @@ Acto seguido el sistema pedira determinar si se desea ver los detalles del cargu
 Este proceso define la arquitectura de la red neuronal backpropagation propuesta para la estimación del valor de la renta de un hogar. En este caso el código, si bien es ejecutable no retornará nada. Este modulo es empleado en el script de entrenamiento del modelo, por tanto no es necesaria su ejecución.
 
 3) [train.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/train.py)
+
+Al ejecutar en la terminal mediante el comando **python src/train.py** en la terminal saldrá un mensaje que pedirá escribir la ruta del archivo "**House_Rent_Dataset.csv"**. Se debe tener a la mano la ruta donde se aloja este archivo de forma local para posteriormente pegarlo en dicha variable de entrada manual. NOTA:// Usualmente al copiar la ruta esta al pegarla sale entre comillas. De ser el caso estas deben ser omitidas dentro de la ruta eviada. 
+
+Es de aclarar, para la ejecución del proyecto NO ES NECESARIO ejecutar antes el archivo **data_loader.py**, esto se realiza con el fin de determinar que el proceso de lectura y depuración de los datos sea exitoso, mas se realiza de forma automática en este script llamando justamente las funciones empleadas en **data_loader.py**.
+
+Una vez ejecutado el proceso el programa realizará de forma automática el cargue, depuración y segmentación de los datos, así como el entrenamiento y exportación del modelo a la carpeta **models**. Tambien guardará los datos de test para su uso en la evaluación. 
+
 4) [evaluate.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/evaluate.py)
+
+
 5) [predict.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/predict.py)
+
+
 6) [utils.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/utils.py)
 
 En este proceso no se realizaron funciones adicionales, por tanto y hasta el momento no existe nada en este archivo. Por tanto no es necesaria su ejecución. 
