@@ -46,17 +46,18 @@ La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pa
 
 ## 4. Requisitos previos y dependencias
 
+## 5. Archivos .py
 
-## 5. Entrenamiento desde train.py
-
-
-## 6. Evaluando desde evaluate.py
+### A. Entrenamiento desde train.py
 
 
-## 7. Prediciendo desde predict.py
+### B. Evaluando desde evaluate.py
 
 
-## 8. Rendimiento del modelo
+### C. Prediciendo desde predict.py
+
+
+## 6. Rendimiento del modelo
 
 
 
