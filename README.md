@@ -1,6 +1,7 @@
 # Modelo_inmoviliario
 Taller DL de predicción del precio inmoviliario usando Backpropagation
 
+CAMBIAR DESDE ACÁ
 El estudio previo de los datos o EDA es una etapa crítica en la ciencia de datos, y sin duda la que consume más tiempo.
 
 Siguiendo los pasos de [Pedro Marcelino](https://www.kaggle.com/pmarcelino), que a su vez seguía el capítulo 'Examining your data' de [Hair et al. (2013)](https://www.amazon.com/gp/product/9332536503/), voy a realizar un completo análisis del conjunto de datos [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) de Kaggle, que espero que resulte útil a la comunidad.
