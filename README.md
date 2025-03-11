@@ -1,10 +1,7 @@
 # Modelo_inmoviliario
 Taller DL de predicción del precio inmoviliario usando Backpropagation
 
-CAMBIAR DESDE ACÁ
-El estudio previo de los datos o EDA es una etapa crítica en la ciencia de datos, y sin duda la que consume más tiempo.
-
-Siguiendo los pasos de [Pedro Marcelino](https://www.kaggle.com/pmarcelino), que a su vez seguía el capítulo 'Examining your data' de [Hair et al. (2013)](https://www.amazon.com/gp/product/9332536503/), voy a realizar un completo análisis del conjunto de datos [House Prices: Advanced Regression Techniques](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) de Kaggle, que espero que resulte útil a la comunidad.
+Este proyecto desarrolla un modelo de red neuronal backpropagation para predecir el precio de alquiler de viviendas en una ciudad. Se estructura un repositorio incluyendo codigo modular, documentacion clara y ejemplos reproducibles.
 
 Voy a dividir el análisis en los siguientes apartados:
 
@@ -16,13 +13,9 @@ Voy a dividir el análisis en los siguientes apartados:
 
 ## 1. Objetivo y Datos Utilizados
 
-Para entender realmente el conjunto de datos, voy a estudiar el significado y la relevancia de cada variable con respecto al problema. Intentaré responder a diversas cuestiones sobre ellas, como:
+Dado un conjunto de datos con informacion sobre alquileres (metros cuadrados, numero de habitaciones, ubicacion, antiguedad del inmueble, etc.), se requiere predecir el precio mensual. Esta es una problematica real en aplicaciones inmobiliarias y de analisis de mercado.
 
-* La relevancia de la variable en la compra de una casa.
-* La importancia de la variable.
-* Solapamiento con otras variables.
-
-En la competición de Kaggle 'House prices' se indica que el problema es la predicción del precio de las viviendas, por lo que la variable objetivo es 'SalePrice'. Las demás variables se describen de la siguiente manera:
+Este taller utilizara un conjunto de datos que contiene informacion detallada sobre mas de 4700 propiedades residenciales disponibles para alquiler, abarcando casas, apartamentos y pisos. El conjunto de datos incluye las siguientes variables. 
 
 - BHK: N ́umero de habitaciones, sala y cocina.
 - Rent: Precio de alquiler de las casas/apartamentos/pisos.
