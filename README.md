@@ -11,7 +11,7 @@ Voy a dividir el análisis en los siguientes apartados:
 4. Requisitos previos y dependencias
 5. Descripcion de archivos
 6. Interactuando con el proyecto
-7. Prediciendo desde predict.py
+7. Rendimiento del proyecto
 8. Conclusion
 
 
