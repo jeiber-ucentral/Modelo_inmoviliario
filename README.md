@@ -3,7 +3,7 @@ Taller DL de predicción del precio inmoviliario usando Backpropagation
 
 Este proyecto desarrolla un modelo de red neuronal backpropagation para predecir el precio de alquiler de viviendas en una ciudad. Se estructura un repositorio incluyendo codigo modular, documentacion clara y ejemplos reproducibles.
 
-Voy a dividir el análisis en los siguientes apartados:
+Se dividirá el análisis en los siguientes apartados:
 
 1. Objetivo y Datos Utilizados
 2. Exploracion del Dataset
