@@ -39,40 +39,62 @@ En esta sección se describe el proceso de exploración realizado sobre el conju
 
 ### Cargar el Dataset
 Se comienza cargando el conjunto de datos en el entorno de trabajo. Se utilizaron las siguientes bibliotecas y métodos para importar los datos:
+
 Librerías usadas: pandas, numpy, matplotlib, seaborn
 
 Método de carga: pd.read_csv() para cargar el archivo CSV. 
 
 ### Inspección Inicial
 Se realizaron las siguientes acciones para obtener una visión preliminar del conjunto de datos:
+
 Visualización de las primeras filas con df.head() y df.columns().
+
 Análisis de las estadísticas descriptivas de la variable objetivo "Rent" con df.describe(), para obtener un resumen numérico de la variable.
+
 
 ### Análisis Exploratorio de Datos (EDA)
 Se realizaron análisis más profundos para entender mejor las relaciones entre las variables:
+
 Distribución de variables: Se analizaron las distribuciones de las variables numéricas y categóricas a través de gráficos como histogramas y diagramas de cajas (boxplots) para ver outliers.
+
 Se ejecutaron las fuciones de asimetria y curtosis para determinar el sesgo en las variables y sus posibles valores extremos.
+
 Valores atípicos: Se identificaron posibles outliers que pudieran afectar los modelos y se tratarlos por medio de transformación logaritmica. 
+
 Se estandarizan los datos para conviertir los valores de a una escala común, con media = 0 y desviación estándar = 1.
+
 Correlaciones: Se calculó la matriz de correlación para identificar posibles relaciones entre variables numéricas.
+
 Relaciones entre variables: Se utilizaron gráficos como diagramas de dispersión (scatter plots) para observar las relaciones entre las variables.
+
 
 ### Limpieza de Datos
 Se identificaron y gestionaron posibles problemas con los datos:
+
 Valores nulos: Se identificaron columnas con valores faltantes y se encuentra que no hay nulos
+
 Se verificó la presencia de normalidad en las distibuciones
+
 
 ### Visualización de Datos
 Se utilizaron diversas visualizaciones para presentar los patrones encontrados:
+
 Histogramas y diagramas de dispersión.
+
 Gráficos de calor (heatmaps) para visualizar las correlaciones entre las variables.
+
 Diagramas de caja para mostrar la variabilidad y la presencia de valores atípicos.
+
 
 ### Conclusiones Iniciales
 A partir de la exploración de los datos, se extrajeron las siguientes conclusiones clave:
+
 *Se evidencia una distribucion sesgada a la derecha (sesgo positivo), con mayoría de valoes concentrados hacia el 0. Cantidad significativa de outliers a la derecha indicando valores de renta muy altos.
+
 *La renta tiene una alta correlacion con variables como tamaño, y cantidad de baños. 
+
 De los gráficos de histograma se evidencia que la matoría de las variables no sigue una distribución normal. 
+
 
 ## 3. Modelo de Red Neuronal
 
