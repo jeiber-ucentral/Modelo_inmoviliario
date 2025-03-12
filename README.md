@@ -93,7 +93,7 @@ A partir de la exploración de los datos, se extrajeron las siguientes conclusio
 
 *La renta tiene una alta correlacion con variables como tamaño, y cantidad de baños. 
 
-De los gráficos de histograma se evidencia que la matoría de las variables no sigue una distribución normal. 
+*De los gráficos de histograma se evidencia que la matoría de las variables no sigue una distribución normal. 
 
 
 ## 3. Modelo de Red Neuronal
