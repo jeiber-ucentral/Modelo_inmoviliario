@@ -40,6 +40,7 @@ En esta sección se describe el proceso de exploración realizado sobre el conju
 ### Cargar el Dataset
 Se comienza cargando el conjunto de datos en el entorno de trabajo. Se utilizaron las siguientes bibliotecas y métodos para importar los datos:
 Librerías usadas: pandas, numpy, matplotlib, seaborn
+
 Método de carga: pd.read_csv() para cargar el archivo CSV. 
 
 ### Inspección Inicial
