@@ -35,11 +35,42 @@ Este taller utilizara un conjunto de datos que contiene informacion detallada so
 
 ## 2. Exploración del DataSet
 
-La variable 'SalePrice' es la variable objetivo de este conjunto de datos. En pasos posteriores a este análisis exploratorio de datos se realizaría una predicción del valor de esta variable, por lo que voy a estudiarla con mayor detenimiento. A simple vista se pueden apreciar:
+En esta sección se describe el proceso de exploración realizado sobre el conjunto de datos utilizado en este proyecto. La exploración de datos es un paso fundamental para comprender su estructura, identificar posibles problemas o patrones, y guiar las decisiones de análisis y modelado. A continuación se detalla cómo se llevó a cabo la exploración y los resultados más relevantes.
 
-* Una desviación con respecto a la distribución normal.
-* Una asimetría positiva.
-* Algunos picos.
+### Cargar el Dataset
+Se comienza cargando el conjunto de datos en el entorno de trabajo. Se utilizaron las siguientes bibliotecas y métodos para importar los datos:
+Librerías usadas: pandas, numpy, matplotlib, seaborn, etc.
+Método de carga: pd.read_csv() para cargar un archivo CSV o funciones similares según el formato del dataset.
+
+### Inspección Inicial
+Se realizaron las siguientes acciones para obtener una visión preliminar del conjunto de datos:
+Visualización de las primeras filas con df.head().
+Verificación de la estructura del dataset con df.info(), que muestra el número de registros, tipos de datos y valores nulos.
+Análisis de las estadísticas descriptivas con df.describe(), para obtener un resumen numérico de las variables numéricas.
+
+### Limpieza de Datos
+Se identificaron y gestionaron posibles problemas con los datos:
+Valores nulos: Se identificaron columnas con valores faltantes y se decidió cómo manejarlos (rellenar, eliminar o imputar).
+Valores atípicos: Se identificaron posibles outliers que pudieran afectar los modelos y se decidió si eliminarlos o tratarlos.
+Duplicados: Se verificó la presencia de registros duplicados y se eliminaron si fue necesario.
+
+### Análisis Exploratorio de Datos (EDA)
+Se realizaron análisis más profundos para entender mejor las relaciones entre las variables:
+Distribución de variables: Se analizaron las distribuciones de las variables numéricas y categóricas a través de gráficos como histogramas, diagramas de cajas (boxplots), y gráficos de barras.
+Correlaciones: Se calculó la matriz de correlación para identificar posibles relaciones entre variables numéricas.
+Relaciones entre variables: Se utilizaron gráficos como diagramas de dispersión (scatter plots) o gráficos de violín (violin plots) para observar las relaciones entre las variables.
+
+### Visualización de Datos
+Se utilizaron diversas visualizaciones para presentar los patrones encontrados:
+Gráficos de barras, histogramas y diagramas de dispersión.
+Gráficos de calor (heatmaps) para visualizar las correlaciones entre las variables.
+Diagramas de caja para mostrar la variabilidad y la presencia de valores atípicos.
+
+### Conclusiones Iniciales
+A partir de la exploración de los datos, se extrajeron las siguientes conclusiones clave:
+[Incluir patrones relevantes que se hayan observado].
+[Mencionar posibles problemas de calidad de los datos, como valores nulos, duplicados, etc.].
+[Destacar cualquier hallazgo importante o interesante que pueda influir en el análisis posterior].
 
 ## 3. Modelo de Red Neuronal
 
