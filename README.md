@@ -174,8 +174,10 @@ Una vez ejecutado el proceso el programa realizará de forma automática el carg
 
 4) [evaluate.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/evaluate.py)
 
+Al ejecutar en la terminal mediante el comando **python src/evaluate.py** en la terminal se realizará automáticamente el proceso de cargue del modelo guardado y los datos de testeo resultantes del código **src/train.py**. Realizará la evaluación del modelo usando estos datos e imprimirá en la terminal una tabla con las principales metricas de desempeño obtenidas, a saber error cuadrático medio (MSE), raiz del error cuadrático medio (RMSE), error medio absoluto (MAE), error porcentual absoluto medio (MAPE) y el coeficiente de determinación (R2). 
 
 5) [predict.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/predict.py)
+
 
 
 6) [utils.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/utils.py)
@@ -199,29 +201,6 @@ El modelo fue evaluado utilizando un conjunto de datos de entrenamiento, a conti
 ## Conclusión
 
 A lo largo de este proyecto
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
