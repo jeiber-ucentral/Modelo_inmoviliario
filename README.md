@@ -98,6 +98,17 @@ A partir de la exploración de los datos, se extrajeron las siguientes conclusio
 
 ## 3. Modelo de Red Neuronal
 
+En este proyecto, se implementó una **red neuronal de retropropagación (backpropagation)** utilizando varias bibliotecas de Python, como **Pandas**, **NumPy**, **Matplotlib** y **TensorFlow/Keras**. El objetivo del modelo es predecir el precio de alquiler de viviendas basado en características como el tamaño de la propiedad, la ubicación, el número de habitaciones, el estado de amueblado, entre otras.
+El modelo consta de las siguientes capas:
+ **Capa de Entrada**:
+   - Número de neuronas igual al número de características del dataset después del preprocesamiento. Estas características incluyen variables numéricas (como el tamaño de la propiedad y el número de habitaciones) y variables categóricas codificadas (como la ubicación y el estado de amueblado).
+**Capas Ocultas**:
+   - **Primera Capa Oculta**: 64 neuronas con función de activación **ReLU** (Rectified Linear Unit). Esta capa captura relaciones no lineales entre las características.
+   - **Segunda Capa Oculta**: 32 neuronas con función de activación **ReLU**. Esta capa ayuda a refinar las características aprendidas por la primera capa.
+   - **Dropout**: Se aplicó una tasa de dropout del 50% (0.5) después de cada capa oculta para evitar el sobreajuste (overfitting). El dropout desactiva aleatoriamente neuronas durante el entrenamiento, lo que mejora la generalización del modelo.
+**Capa de Salida**:
+   - 1 neurona con función de activación **lineal**. Dado que este es un problema de regresión (predicción de un valor continuo, como el precio de alquiler), la capa de salida no utiliza una función de activación no lineal.
+
 
 ## 4. Requisitos previos y dependencias
 
