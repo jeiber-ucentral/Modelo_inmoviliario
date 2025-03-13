@@ -185,7 +185,8 @@ En este proceso no se realizaron funciones adicionales, por tanto y hasta el mom
 
 ## 7. Rendimiento del modelo
 El modelo fue evaluado utilizando un conjunto de datos de entrenamiento y un conjunto de prueba. A continuación se presentan los resultados obtenidos en ambas particiones:
-###Resultados datos de entrenamiento
+
+### Resultados datos de entrenamiento
 
 - MSE 1.213371e+09
 - RMSE 34833.470285
