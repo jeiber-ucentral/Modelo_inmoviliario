@@ -184,7 +184,7 @@ En este proceso no se realizaron funciones adicionales, por tanto y hasta el mom
 
 
 ## 7. Rendimiento del modelo
-El modelo fue evaluado utilizando un conjunto de datos de entrenamiento y un conjunto de prueba. A continuación se presentan los resultados obtenidos en ambas particiones:
+El modelo fue evaluado utilizando un conjunto de datos de entrenamiento, a continuación se presentan los resultados obtenidos.
 
 ### Resultados datos de entrenamiento
 
