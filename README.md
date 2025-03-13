@@ -116,9 +116,17 @@ El modelo consta de las siguientes capas:
 (Texto descriptivo de lo que contiene cada archivo o que se realiza en cada uno)
 
 * Notebooks
-1) [EDA.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/00%20EDA.ipynb)
-2) [Depuracion.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/01%20Depuracion.ipynb)
-3) [Entrenamiento.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/02%20Entrenamiento.ipynb)
+1) [EDA.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/00%20EDA.ipynb):Este archivo de Python está diseñado para llevar a cabo un análisis exploratorio de datos (EDA) en un dataset que contiene información sobre alquileres de propiedades. El flujo de trabajo sigue una serie de pasos para explorar, visualizar y preparar los datos para un análisis más profundo o modelado predictivo. Las tareas principales incluyen:
+- Cargar y mostrar los primeros datos.
+- Análisis descriptivo.
+- Visualización de la distribución de los datos.
+- Transformaciones de los datos.
+- Análisis bivariado.
+- Análisis de datos categóricos.
+- Análisis de valores faltantes.
+- Gráficos de probabilidad normal.
+3) [Depuracion.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/01%20Depuracion.ipynb)
+4) [Entrenamiento.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/02%20Entrenamiento.ipynb)
 
 * src
 1) [data_loader.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/data_loader.py)
