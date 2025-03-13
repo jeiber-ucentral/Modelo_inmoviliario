@@ -116,23 +116,14 @@ El modelo consta de las siguientes capas:
 (Texto descriptivo de lo que contiene cada archivo o que se realiza en cada uno)
 
 * Notebooks
-1) [EDA.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/00%20EDA.ipynb): Este archivo de Python está diseñado para llevar a cabo un análisis exploratorio de datos (EDA) del dataset propuesto. El flujo de trabajo sigue una serie de pasos para explorar, visualizar y preparar los datos para un análisis más profundo o modelado predictivo. Dichos pasos principales incluyen:
-- Cargar y mostrar los primeros datos.
-- Análisis descriptivo.
-- Visualización de la distribución de los datos.
-- Transformaciones de los datos.
-- Análisis bivariado.
-- Análisis de datos categóricos.
-- Análisis de valores faltantes.
-- Gráficos de probabilidad normal.
-- Es un archivo completo de análisis exploratorio de datos que realiza tareas de carga, limpieza, visualización, transformación, y análisis estadístico. Su objetivo principal es preparar y comprender mejor los datos para futuros análisis o modelados predictivos. Las visualizaciones y estadísticas proporcionadas permiten entender la distribución de las variables, la presencia de valores atípicos, la relación entre variables y la calidad de los datos.
+1) [EDA.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/00%20EDA.ipynb): Es un archivo completo de análisis exploratorio de datos que realiza tareas de carga, limpieza, visualización, transformación, y análisis estadístico. Su objetivo principal es preparar y comprender mejor los datos para futuros análisis o modelados predictivos. Las visualizaciones y estadísticas proporcionadas permiten entender la distribución de las variables, la presencia de valores atípicos, la relación entre variables y la calidad de los datos.
 2) [Depuracion.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/01%20Depuracion.ipynb): Con este archivo se realiza un proceso integral de limpieza de datos del dataset, entre las principales tareas se incluye la creación de nuevas variables, la transformación de variables categóricas en variables binarias, la corrección de errores en las columnas y la eliminación de datos irrelevantes. Al final del proceso, se guarda el DataFrame limpio y preparado para análisis posteriores.
 3) [Entrenamiento.ipynb](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/016f7e17d6a2cf41fbee5fc9e3df1485255aad8f/notebooks/02%20Entrenamiento.ipynb): Es un notebook que contiene el proceso para entrenar la red neuronal de regresión utilizando el dataset de alquileres de casas. Incluye la carga y preprocesamiento de los datos, la definición y entrenamiento del modelo de red neuronal, la visualización de las métricas de entrenamiento y la evaluación final del modelo en el conjunto de prueba.
 
 * src
-1) [data_loader.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/data_loader.py)
-2) [evaluate.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/evaluate.py)
-3) [model.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/model.py)
+1) [data_loader.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/data_loader.py): El archivo proporciona un conjunto de herramientas para cargar y limpiar el dataset. La limpieza incluye ajustes en los valores de las columnas, la creación de nuevas variables, y la conversión de variables categóricas en formato adecuado para modelos de Deep Learning.
+2) [evaluate.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/evaluate.py): El script se utiliza para cargar el modelo previamente entrenado y los datos de prueba, luego evalúa el rendimiento del modelo en esas pruebas usando diversas métricas de error. El script devuelve y muestra un DataFrame con los resultados de la evaluación, permitiendo evaluar la precisión y efectividad del modelo entrenado.
+3) [model.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/model.py): El notebook define la arquitectura de la red neuronal propuesta de varias capas densas con regularización L1 y L2, diseñadas para la regresión. El modelo se compila con el optimizador adam y la función de pérdida mean_squared_error. Se creó una función que entrena el modelo tomando como entrada los datos de entrenamiento para configurar la dimensión de la capa de entrada.
 4) [train.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/train.py)
 5) [predict.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/predict.py)
 6) [utils.py](https://github.com/jeiber-ucentral/Modelo_inmoviliario/blob/6cd9ff0a413aca8cf5e9d284076aa98e2ca083c9/src/utils.py)
