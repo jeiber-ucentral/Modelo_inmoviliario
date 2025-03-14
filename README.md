@@ -112,6 +112,115 @@ El modelo consta de las siguientes capas:
 
 ## 4. Requisitos previos y dependencias
 
+Para ejecutar este proyecto, es necesario cumplir con los siguientes requisitos previos y tener instaladas las dependencias adecuadas. A continuación, se detallan los pasos para configurar el entorno correctamente.
+
+### Requisitos Previos
+
+1. **Python 3.8 o superior**:
+   - Este proyecto está desarrollado en Python. Asegúrate de tener instalada una versión compatible. Puedes verificar tu versión de Python ejecutando:
+     ```bash
+     python --version
+     ```
+   - Si no tienes Python instalado, descárgalo desde [python.org](https://www.python.org/).
+
+2. **Git (opcional)**:
+   - Si deseas clonar el repositorio, necesitarás Git instalado en tu sistema. Puedes descargarlo desde [git-scm.com](https://git-scm.com/).
+
+3. **Entorno Virtual (recomendado)**:
+   - Se recomienda utilizar un entorno virtual para aislar las dependencias del proyecto. Puedes crear un entorno virtual con:
+     ```bash
+     python -m venv venv
+     ```
+   - Activa el entorno virtual:
+     - En Windows:
+       ```bash
+       venv\Scripts\activate
+       ```
+     - En macOS/Linux:
+       ```bash
+       source venv/bin/activate
+       ```
+
+### Dependencias del Proyecto
+
+El proyecto utiliza las siguientes bibliotecas de Python:
+
+1. **Pandas**:
+   - Para la manipulación y análisis de datos.
+   - Instalación:
+     ```bash
+     pip install pandas
+     ```
+
+2. **NumPy**:
+   - Para operaciones numéricas y manejo de matrices.
+   - Instalación:
+     ```bash
+     pip install numpy
+     ```
+
+3. **Scikit-Learn**:
+   - Para preprocesamiento de datos (normalización, codificación) y evaluación del modelo.
+   - Instalación:
+     ```bash
+     pip install scikit-learn
+     ```
+
+4. **TensorFlow/Keras**:
+   - Para la construcción, entrenamiento y evaluación de la red neuronal.
+   - Instalación:
+     ```bash
+     pip install tensorflow
+     ```
+
+5. **Matplotlib**:
+   - Para la visualización de datos y resultados.
+   - Instalación:
+     ```bash
+     pip install matplotlib
+     ```
+
+6. **Seaborn** (opcional):
+   - Para gráficos estadísticos más avanzados.
+   - Instalación:
+     ```bash
+     pip install seaborn
+     ```
+
+7. **Jupyter Notebook** (opcional):
+   - Si deseas ejecutar los notebooks proporcionados en el proyecto.
+   - Instalación:
+     ```bash
+     pip install jupyter
+     ```
+
+### Instalación de Dependencias
+
+Puedes instalar todas las dependencias del proyecto de dos maneras:
+
+1. **Instalación Manual**:
+   - Ejecuta el siguiente comando para instalar las dependencias una por una:
+     ```bash
+     pip install pandas numpy scikit-learn tensorflow matplotlib seaborn jupyter
+     ```
+
+2. **Instalación desde `requirements.txt`**:
+   - El proyecto incluye un archivo `requirements.txt` que lista todas las dependencias necesarias. Para instalarlas, ejecuta:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+   - El archivo `requirements.txt` contiene lo siguiente:
+     ```
+     pandas==2.2.3
+     numpy==2.0.2
+     scikit-learn==1.4.2
+     tensorflow==2.16.1
+     matplotlib==3.8.4
+     seaborn==0.13.2
+     jupyter==1.0.0
+     ```
+
 ## 5. Descripcion de archivos
 (Texto descriptivo de lo que contiene cada archivo o que se realiza en cada uno)
 
