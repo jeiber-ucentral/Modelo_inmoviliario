@@ -314,7 +314,7 @@ El modelo fue evaluado utilizando un conjunto de datos de entrenamiento, a conti
 
 ## Conclusión
 
-A lo largo de este proyecto
+A lo largo de este proyecto se enocntró que el precio delas viviendas está altamente correlacionado con amenidades como la cantidad de baños y el tamaño. 
 
 
 
