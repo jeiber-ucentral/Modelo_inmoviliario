@@ -12,7 +12,6 @@ Se dividirá el análisis en los siguientes apartados:
 5. Descripcion de archivos
 6. Interactuando con el proyecto
 7. Rendimiento del proyecto
-8. Conclusion
 
 
 ## 1. Objetivo y Datos Utilizados
@@ -311,10 +310,6 @@ El modelo fue evaluado utilizando un conjunto de datos de entrenamiento, a conti
 - R2 0.695545
 
 
-
-## Conclusión
-
-A lo largo de este proyecto se enocntró que el precio delas viviendas está altamente correlacionado con amenidades como la cantidad de baños y el tamaño. 
 
 
 
